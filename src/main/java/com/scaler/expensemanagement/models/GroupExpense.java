@@ -1,10 +1,13 @@
 package com.scaler.expensemanagement.models;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToMany;
-
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
+@Entity
 public class GroupExpense extends BaseModel{
-    @ManyToMany
+    @ManyToOne
     private Group group;
-    @ManyToMany
+    @OneToOne
     private Expense expense;
 }
