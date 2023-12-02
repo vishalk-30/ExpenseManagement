@@ -17,4 +17,8 @@ public class UserService {
                    .build();
         return userRepository.save(user);
     }
+
+    public User getUserInternal(int id){
+        return userRepository.findById(id).orElse(null);
+    }
 }
