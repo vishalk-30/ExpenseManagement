@@ -2,14 +2,16 @@ package com.scaler.expensemanagement.models;
 
 import com.scaler.expensemanagement.constant.ExpenseStatus;
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.List;
 
 @Entity
 @Getter
 @Setter
+@Builder(toBuilder = true)
+@NoArgsConstructor
+@AllArgsConstructor
 public class Expense extends BaseModel{
     private String description;
     private Double amount;
