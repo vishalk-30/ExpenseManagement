@@ -27,4 +27,7 @@ public class ExpenseService {
                 .build();
         return expenseRepository.save(expense);
     }
+    public Expense getExpenseInternal(int id){
+        return expenseRepository.findById(id).orElse(null);
+    }
 }
